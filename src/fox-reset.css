@@ -1,0 +1,84 @@
+/* Minimal reset layer */
+
+/* Better box model */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* System font stack for consistent typography */
+html {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Remove UA margin */
+* {
+  margin: 0;
+}
+
+/* Allow keyword-driven size interpolation when motion is permitted */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Ease reading with a relaxed line height and macOS font smoothing */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Make embedded media block-level and fluid by default */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Ensure interactive controls inherit the surrounding font choices */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Keep long words and headings from breaking layout boxes */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Better text wrap */
+p {
+  text-wrap: pretty;
+}
+
+/* Headings inherit the base font and balance multi-line titles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  text-wrap: balance;
+}
+
+/* Hide default markers in list */
+ol,
+ul {
+  list-style: none;
+  padding-inline: 0;
+}
