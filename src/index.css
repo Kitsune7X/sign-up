@@ -6,6 +6,7 @@
 :root {
   --background-primary: #c1785a;
   --text-color-primary: #313647;
+  --main-header-color: #faf9f5;
   --background-secondary: #8abeb9;
   --modal-background: #b7e5cd;
   --button-color: #305669;
@@ -93,8 +94,6 @@ body {
 
 #root {
   max-width: 80rem;
-  /* margin: 0 auto; */
-  /* background-color: #535bf2; */
   color: var(--text-color-primary);
 }
 
@@ -126,11 +125,7 @@ body {
 
 #hero > div {
   display: flex;
-  /* background-color: rgba(0, 0, 0, 0.4); */
   background-color: rgba(196, 155, 168, 0.4);
-  /* background-color: rgba(214, 204, 153, 0.4); */
-  /* background-color: rgba(193, 120, 90, 0.4); */
-  /* backdrop-filter: blur(); */
   padding: 1rem;
   align-items: center;
   gap: 0.7rem;
@@ -141,13 +136,14 @@ body {
 }
 
 #hero > div > h1 {
+  /* Trying to make font responsive */
   font-size: clamp(1.2rem, 2rem + 0.5vw, 3rem);
-  color: #faf9f5;
+  color: var(--main-header-color);
   font-family: "Font Awesome 6 Free";
 }
 
 /* ============================== */
-/* * Form section — START     */
+/* * Signup section — START     */
 /* ============================== */
 
 .sign-up-section {
@@ -181,7 +177,6 @@ form > h2 {
 
 h2 + section {
   background-color: var(--background-secondary);
-  /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5); */
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -193,7 +188,6 @@ section > div {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  /* background-color: #313647; */
 }
 
 section > div > label {
@@ -202,19 +196,19 @@ section > div > label {
 
 input {
   max-width: 100%;
-  /* background-color: #b7e5cd; */
-  /* background-color: var(--background-secondary); */
-  /* border: 1px solid var(--button-color); */
-  /* border-radius: 3px; */
   border: none;
-  /* appearance: none; */
   background: none;
   border-bottom: 2px solid var(--button-color);
   margin-bottom: 0.3rem;
+  transition: background-color 0.3s;
 }
-/* ============================== */
-/* * Form section — END       */
-/* ============================== */
+
+input:focus {
+  background: #74a09c;
+  border: none;
+  appearance: none;
+  outline: none;
+}
 
 section + section {
   margin-left: 2rem;
@@ -236,9 +230,13 @@ button {
   color: #f6f6f6;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #faf9f5;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* ============================== */
+/* * Signup section — END       */
+/* ============================== */
