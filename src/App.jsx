@@ -36,6 +36,7 @@ const App = () => {
                 <input type="text" />
               </label>
             </div>
+
             <div>
               <label htmlFor="">
                 Email:
@@ -46,6 +47,7 @@ const App = () => {
                 <input type="text" />
               </label>
             </div>
+
             <div>
               <label htmlFor="">
                 Password:

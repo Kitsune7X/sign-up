@@ -4,9 +4,11 @@
 
 /* ---------- Variables — START ---------- */
 :root {
-  --background-primary: #f7f6f3;
-  --text-color-primary: #4b4a43;
-  --background-secondary: #bdb7ae;
+  --background-primary: #c1785a;
+  --text-color-primary: #313647;
+  --background-secondary: #8abeb9;
+  --modal-background: #b7e5cd;
+  --button-color: #305669;
 }
 
 /* ---------- Variables — END ---------- */
@@ -85,7 +87,7 @@ body {
   align-items: center;
   min-width: 20rem;
   min-height: 100vh;
-  background-color: var(--background-primary, #fff);
+  background-color: var(--background-primary);
   font-family: "Outfit";
 }
 
@@ -115,7 +117,6 @@ body {
 /* ---------- Hero ---------- */
 #hero {
   width: 40%;
-  /* background-color: var(--background-secondary); */
   background-image: url(./assets/yuki-bg-day.jpg);
   background-position: center;
   background-size: cover;
@@ -127,6 +128,8 @@ body {
   display: flex;
   /* background-color: rgba(0, 0, 0, 0.4); */
   background-color: rgba(196, 155, 168, 0.4);
+  /* background-color: rgba(214, 204, 153, 0.4); */
+  /* background-color: rgba(193, 120, 90, 0.4); */
   /* backdrop-filter: blur(); */
   padding: 1rem;
   align-items: center;
@@ -153,6 +156,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--modal-background);
+}
+
+.sign-up-section > div {
+  padding: 0 2rem;
 }
 
 .sign-up-section div span {
@@ -168,21 +176,53 @@ div + form {
 form > h2 {
   font-size: 1.5rem;
   font-weight: 700;
+  margin: 1.5rem 0 0 2rem;
 }
 
 h2 + section {
   background-color: var(--background-secondary);
   /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5); */
-  height: 170px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 section > div {
   display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* background-color: #313647; */
+}
+
+section > div > label {
+  width: 40%;
+}
+
+input {
+  max-width: 100%;
+  /* background-color: #b7e5cd; */
+  /* background-color: var(--background-secondary); */
+  /* border: 1px solid var(--button-color); */
+  /* border-radius: 3px; */
+  border: none;
+  /* appearance: none; */
+  background: none;
+  border-bottom: 2px solid var(--button-color);
+  margin-bottom: 0.3rem;
 }
 /* ============================== */
 /* * Form section — END       */
 /* ============================== */
 
+section + section {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -190,7 +230,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #6b8796;
+  background-color: var(--button-color);
   cursor: pointer;
   transition: border-color 0.25s;
   color: #f6f6f6;
