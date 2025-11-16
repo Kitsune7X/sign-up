@@ -113,10 +113,13 @@ body {
   overflow: hidden;
 }
 
-/* ---------- Hero ---------- */
+/* ============================== */
+/* * Hero — START     */
+/* ============================== */
+
 #hero {
   width: 40%;
-  background-image: url(../public/yuki-bg-day.jpg);
+  background-image: url(/yuki-bg-day.jpg);
   background-position: center;
   background-size: cover;
   height: 100%;
@@ -141,6 +144,10 @@ body {
   color: var(--main-header-color);
   font-family: 'Font Awesome 6 Free';
 }
+
+/* ============================== */
+/* * Hero — END       */
+/* ============================== */
 
 /* ============================== */
 /* * Signup section — START     */
@@ -181,7 +188,6 @@ h2 + section {
   height: 200px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 }
 
@@ -211,9 +217,10 @@ input:focus {
   outline: none;
 }
 
-/* input:invalid {
-  background-color: red;
-} */
+input:user-invalid {
+  background-color: var(--background-primary);
+}
+
 section + section {
   margin-left: 2rem;
   display: flex;

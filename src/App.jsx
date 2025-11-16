@@ -11,16 +11,8 @@ const App = () => {
 
   console.log(text.at(counter));
 
-  const concatLetter = (arr) => {
-    setPara(para.concat(arr[counter]));
-    setCounter(counter + 1);
-  };
-
   useEffect(() => {
-    console.log('FUCK!');
     const idx = setInterval(() => {
-      console.log('WTF');
-      // if (p.length === arr.length) return;
       setPara((p) => {
         if (p.length === arr.length) {
           clearInterval(idx);
@@ -28,10 +20,8 @@ const App = () => {
         }
         return p.concat(arr[p.length]);
       });
-      // setCounter((c) => c + 1);
     }, 50);
     return () => {
-      console.log('???');
       clearInterval(idx);
     };
   }, []);
@@ -52,11 +42,6 @@ const App = () => {
 
       <div className='sign-up-section'>
         <div>
-          {/* <span>
-            The Hokkaido red fox grows a thicker, softer coat each winter — its
-            fur glowing golden even in the deep snow, a beacon of warmth in the
-            cold north.
-          </span> */}
           <p>{para}</p>
         </div>
         <form>
@@ -99,6 +84,7 @@ const App = () => {
                 <input
                   type='password'
                   required={true}
+                  minLength={8}
                   id='confirm-password'
                 />
               </label>
