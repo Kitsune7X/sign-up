@@ -1,16 +1,29 @@
-# React + Vite
+# Foxy Sign up
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="./public/logo-med.png" width=80/>
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Simple Sign up page prototype.
 
-## React Compiler
+Resources were made with Clip Studio Paint, Adobe Photoshop, Adobe Illustrator.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Run the page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Clone the repository.
+- Then
+
+```npm
+npm install
+npm run dev
+```
+
+My small Art shop.
+
+[Ko-fi](https://ko-fi.com/L3L31NFKCC)
+
+[Gumroad: https://kitsune7x.gumroad.com/](https://kitsune7x.gumroad.com/)
+
+Thank you for visiting.
