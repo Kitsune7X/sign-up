@@ -41,7 +41,7 @@ const App = () => {
       <div id='hero'>
         <div>
           <img
-            src='./src/assets/logo-med.png'
+            src='/logo-med.png'
             alt='website-logo'
             width={70}
             height={70}
@@ -96,7 +96,11 @@ const App = () => {
               </label>
               <label htmlFor='confirm-password'>
                 Confirm Password*:
-                <input type='password' required={true} id='confirm-password' />
+                <input
+                  type='password'
+                  required={true}
+                  id='confirm-password'
+                />
               </label>
             </div>
           </section>
