@@ -77,11 +77,12 @@
 /* ---------- Fonts — END ---------- */
 
 html {
-  /* Set up the size for 1rem */
+  /* Fix rem base so clamp calculations stay predictable */
   font-size: 16px;
 }
 
 body {
+  /* Center the card so modal framing matches design */
   display: flex;
   font: inherit;
   justify-content: center;
@@ -93,6 +94,7 @@ body {
 }
 
 #root {
+  /* Cap layout width so hero artwork doesn't overstretch */
   max-width: 80rem;
   color: var(--text-color-primary);
 }
@@ -102,6 +104,7 @@ body {
 /* ============================== */
 
 .form-container {
+  /* Lock card dimensions for a consistent hero/form split */
   width: 55rem;
   height: 37rem;
   background-color: var(--background-primary);
@@ -118,6 +121,7 @@ body {
 /* ============================== */
 
 #hero {
+  /* Keep hero narrow to emphasize copy over art */
   width: 40%;
   background-image: url(/yuki-bg-day.jpg);
   background-position: center;
@@ -127,6 +131,7 @@ body {
 }
 
 #hero > div {
+  /* Overlay text banner to maintain readability on photo */
   display: flex;
   background-color: rgba(196, 155, 168, 0.4);
   padding: 1rem;
@@ -154,6 +159,7 @@ body {
 /* ============================== */
 
 .sign-up-section {
+  /* Give form more space because inputs need breathing room */
   width: 60%;
   height: 100%;
   display: flex;
@@ -184,14 +190,16 @@ form > h2 {
 }
 
 h2 + section {
+  /* Soft panel behind inputs to reinforce grouping */
   background-color: var(--background-secondary);
-  height: 200px;
+  height: 12.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 section > div {
+  /* Two-column labels keep tab order intuitive */
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -241,7 +249,7 @@ button {
   color: #f6f6f6;
 }
 button:hover {
-  border-color: #faf9f5;
+  border-color: var(--main-header-color);
 }
 button:focus,
 button:focus-visible {

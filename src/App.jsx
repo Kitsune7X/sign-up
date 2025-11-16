@@ -1,48 +1,19 @@
-import { useEffect, useState } from 'react';
+import FlavorText from '../components/FlavorText';
 
 const App = () => {
-  const [para, setPara] = useState([]);
-  const [counter, setCounter] = useState(0);
-  const text =
-    'Foxes use their fluffy winter tails (called “brushes”) as a built-in blanket. On freezing nights, they curl into a tight ball and wrap the tail over their nose to trap warm air, keeping their body heat from escaping.';
-  const arr = Array.from(text);
-  console.log(para);
-  // console.log(arr);
-
-  console.log(text.at(counter));
-
-  useEffect(() => {
-    const idx = setInterval(() => {
-      setPara((p) => {
-        if (p.length === arr.length) {
-          clearInterval(idx);
-          return p;
-        }
-        return p.concat(arr[p.length]);
-      });
-    }, 50);
-    return () => {
-      clearInterval(idx);
-    };
-  }, []);
-
   return (
     <div className='form-container'>
-      <div id='hero'>
-        <div>
-          <img
-            src='/logo-med.png'
-            alt='website-logo'
-            width={70}
-            height={70}
-          />
-          <h1>Foxy</h1>
-        </div>
-      </div>
+      <Hero
+        id='hero'
+        src='/logo-med.png'
+        alt='Website logo'
+        size={70}
+        title='FOXY'
+      />
 
       <div className='sign-up-section'>
         <div>
-          <p>{para}</p>
+          <FlavorText />
         </div>
         <form>
           <h2>Sign Up Now!</h2>
@@ -98,8 +69,6 @@ const App = () => {
             </p>
           </section>
         </form>
-        {/* <button onClick={() => concatLetter(arr)}>debug button</button>
-        <p>Counter: {counter}</p> */}
       </div>
     </div>
   );
@@ -107,11 +76,14 @@ const App = () => {
 
 export default App;
 
-// const empty = [];
-// console.log(empty);
-
-// const text =
-//   'The Hokkaido red fox grows a thicker, softer coat each winter — its fur glowing golden even in the deep snow, a beacon of warmth in the cold north.';
-// const arr = Array.from(text);
-// arr.forEach((item) => empty.concat(item));
-// console.log(empty);
+// ---------- Component ----------
+const Hero = ({ id, src, alt, size, title }) => {
+  return (
+    <div id={id}>
+      <div>
+        <img src={src} alt={alt} width={size} height={size} />
+        <h1>{title}</h1>
+      </div>
+    </div>
+  );
+};
