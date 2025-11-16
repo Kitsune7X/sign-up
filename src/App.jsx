@@ -1,13 +1,48 @@
-// import { useState } from "react";
+import { useEffect, useState } from 'react';
 
 const App = () => {
+  const [para, setPara] = useState([]);
+  const [counter, setCounter] = useState(0);
+  const text =
+    'Foxes use their fluffy winter tails (called “brushes”) as a built-in blanket. On freezing nights, they curl into a tight ball and wrap the tail over their nose to trap warm air, keeping their body heat from escaping.';
+  const arr = Array.from(text);
+  console.log(para);
+  // console.log(arr);
+
+  console.log(text.at(counter));
+
+  const concatLetter = (arr) => {
+    setPara(para.concat(arr[counter]));
+    setCounter(counter + 1);
+  };
+
+  useEffect(() => {
+    console.log('FUCK!');
+    const idx = setInterval(() => {
+      console.log('WTF');
+      // if (p.length === arr.length) return;
+      setPara((p) => {
+        if (p.length === arr.length) {
+          clearInterval(idx);
+          return p;
+        }
+        return p.concat(arr[p.length]);
+      });
+      // setCounter((c) => c + 1);
+    }, 50);
+    return () => {
+      console.log('???');
+      clearInterval(idx);
+    };
+  }, []);
+
   return (
-    <div className="form-container">
-      <div id="hero">
+    <div className='form-container'>
+      <div id='hero'>
         <div>
           <img
-            src="./src/assets/logo-med.png"
-            alt="website-logo"
+            src='./src/assets/logo-med.png'
+            alt='website-logo'
             width={70}
             height={70}
           />
@@ -15,61 +50,78 @@ const App = () => {
         </div>
       </div>
 
-      <div className="sign-up-section">
+      <div className='sign-up-section'>
         <div>
-          <span>
+          {/* <span>
             The Hokkaido red fox grows a thicker, softer coat each winter — its
             fur glowing golden even in the deep snow, a beacon of warmth in the
             cold north.
-          </span>
+          </span> */}
+          <p>{para}</p>
         </div>
         <form>
           <h2>Sign Up Now!</h2>
           <section>
             <div>
-              <label htmlFor="">
-                First name:
-                <input type="text" />
+              <label htmlFor='fname'>
+                First name*:
+                <input type='text' required={true} id='fname' />
               </label>
-              <label htmlFor="">
-                Last name:
-                <input type="text" />
+              <label htmlFor='lname'>
+                Last name*:
+                <input type='text' required={true} id='lname' />
               </label>
             </div>
 
             <div>
-              <label htmlFor="">
-                Email:
-                <input type="text" />
+              <label htmlFor='email'>
+                Email*:
+                <input type='email' required={true} id='email' />
               </label>
-              <label htmlFor="">
+              <label htmlFor='phone'>
                 Phone number:
-                <input type="text" />
+                <input type='tel' required={false} id='phone' />
               </label>
             </div>
 
             <div>
-              <label htmlFor="">
-                Password:
-                <input type="text" />
+              <label htmlFor='password'>
+                Password*:
+                <input
+                  type='password'
+                  required={true}
+                  minLength={8}
+                  id='password'
+                />
               </label>
-              <label htmlFor="">
-                Confirm Password:
-                <input type="text" />
+              <label htmlFor='confirm-password'>
+                Confirm Password*:
+                <input type='password' required={true} id='confirm-password' />
               </label>
             </div>
           </section>
 
           <section>
-            <button type="submit">Create an Account</button>
+            <button type='submit'>Create an Account</button>
             <p>
-              Already have an Account ? <a href="#">Log in</a>
+              Already have an Account ? <a href='#'>Log in</a>
             </p>
           </section>
         </form>
+        {/* <button onClick={() => concatLetter(arr)}>debug button</button>
+        <p>Counter: {counter}</p> */}
       </div>
     </div>
   );
 };
 
 export default App;
+
+// const empty = [];
+// console.log(empty);
+
+// const text =
+//   'The Hokkaido red fox grows a thicker, softer coat each winter — its fur glowing golden even in the deep snow, a beacon of warmth in the cold north.';
+// const arr = Array.from(text);
+// arr.forEach((item) => empty.concat(item));
+// console.log(empty);

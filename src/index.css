@@ -17,20 +17,20 @@
 /* ---------- Fonts — START ---------- */
 
 @font-face {
-  font-family: "Font Awesome 6 Free";
-  src: url("https://storage.googleapis.com/production-os-assets/assets/fontawesome/1629704621943/6.4.2/webfonts/fa-solid-900.woff2")
-      format("woff2"),
-    url("https://storage.googleapis.com/production-os-assets/assets/fontawesome/1629704621943/6.4.2/webfonts/fa-solid-900.ttf")
-      format("truetype");
+  font-family: 'Font Awesome 6 Free';
+  src: url('https://storage.googleapis.com/production-os-assets/assets/fontawesome/1629704621943/6.4.2/webfonts/fa-solid-900.woff2')
+      format('woff2'),
+    url('https://storage.googleapis.com/production-os-assets/assets/fontawesome/1629704621943/6.4.2/webfonts/fa-solid-900.ttf')
+      format('truetype');
   font-style: normal;
   font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Outfit";
-  src: url("https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyO4a0Ew.woff2")
-    format("woff2");
+  font-family: 'Outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyO4a0Ew.woff2')
+    format('woff2');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -40,9 +40,9 @@
 }
 
 @font-face {
-  font-family: "Outfit";
-  src: url("https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4e6yO4a0Ew.woff2")
-    format("woff2");
+  font-family: 'Outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4e6yO4a0Ew.woff2')
+    format('woff2');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -52,9 +52,9 @@
 }
 
 @font-face {
-  font-family: "Outfit";
-  src: url("https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4QK1O4a0Ew.woff2")
-    format("woff2");
+  font-family: 'Outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4QK1O4a0Ew.woff2')
+    format('woff2');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -64,9 +64,9 @@
 }
 
 @font-face {
-  font-family: "Outfit";
-  src: url("https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1O4a0Ew.woff2")
-    format("woff2");
+  font-family: 'Outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1O4a0Ew.woff2')
+    format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -89,7 +89,7 @@ body {
   min-width: 20rem;
   min-height: 100vh;
   background-color: var(--background-primary);
-  font-family: "Outfit";
+  font-family: 'Outfit';
 }
 
 #root {
@@ -139,7 +139,7 @@ body {
   /* Trying to make font responsive */
   font-size: clamp(1.2rem, 2rem + 0.5vw, 3rem);
   color: var(--main-header-color);
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
 }
 
 /* ============================== */
@@ -157,9 +157,10 @@ body {
 
 .sign-up-section > div {
   padding: 0 2rem;
+  height: 5rem;
 }
 
-.sign-up-section div span {
+.sign-up-section div p {
   font-weight: 600;
 }
 div + form {
@@ -210,6 +211,9 @@ input:focus {
   outline: none;
 }
 
+/* input:invalid {
+  background-color: red;
+} */
 section + section {
   margin-left: 2rem;
   display: flex;
@@ -235,6 +239,21 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ---------- Link ---------- */
+p > a {
+  color: var(--text-color-primary);
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+p > a:hover {
+  color: var(--main-header-color);
+  transition: 0.3s ease;
+}
+p > a:visited {
+  color: var(--background-primary);
 }
 
 /* ============================== */
